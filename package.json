@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node starting.js"
+    "start": "node --experimental-modules starting.js"
   },
   "repository": {
     "type": "git",
