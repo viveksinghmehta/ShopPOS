@@ -2,7 +2,6 @@
   "name": "shoppos",
   "version": "1.0.0",
   "description": "The First POS (Point Of Sale)",
-  "type": "module",
   "main": "starting.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -11,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node --experimental-modules starting.js"
+    "start": "node starting.js"
   },
   "repository": {
     "type": "git",
