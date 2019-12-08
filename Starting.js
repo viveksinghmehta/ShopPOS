@@ -10,6 +10,7 @@ import http from 'http';
 import express from 'express';
 import bodyParser from 'body-parser';
 
+const app = express();
 
 // create application/json parser
 var jsonParser = bodyParser.json();
@@ -42,8 +43,6 @@ app.get("/test", function (request, response) {
     response.status(200);
     response.json(newJson);
 });
-
-const app = express();
 
 const httpServer = http.createServer(app);
 
