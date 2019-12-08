@@ -22,8 +22,8 @@ app.get("/test", function (request, response) {
     response.end("TEsting");
 })
 
-const app = express()
+const app = express();
 
-const httpServer = http.createServer(app)
+const httpServer = http.createServer(app);
 
-httpServer.listen(process.env.PORT || 1526)
+httpServer.listen(process.env.PORT || 1526);
