@@ -6,12 +6,12 @@
  * 
  * Copyright (c) 2019 Vivek Singh Mehta
  */
-// import http from 'http';
-// import express from 'express';
-// import bodyParser from 'body-parser';
-const http = require('http');
-const express = require('express');
-const bodyParser = require('body-parser');
+import http from 'http';
+import express from 'express';
+import bodyParser from 'body-parser';
+// const http = require('http');
+// const express = require('express');
+// const bodyParser = require('body-parser');
 
 const app = express();
 
