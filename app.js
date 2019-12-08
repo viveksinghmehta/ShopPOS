@@ -4,6 +4,19 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "viveksinghmehta",
+    password: "123456"
+});
+
+con.connect(function (err) {
+    if (err) throw err;
+    console.log("Connected!");
+});
+
 // create application/json parser
 var jsonParser = bodyParser.json();
 
