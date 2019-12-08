@@ -1,0 +1,23 @@
+{
+  "name": "shoppos",
+  "version": "1.0.0",
+  "description": "The First POS (Point Of Sale)",
+  "main": "Starting.js",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://viveksinghmehta@github.com/viveksinghmehta/ShopPOS.git"
+  },
+  "author": "Vivek Singh Mehta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viveksinghmehta/ShopPOS/issues"
+  },
+  "homepage": "https://github.com/viveksinghmehta/ShopPOS#readme"
+}
