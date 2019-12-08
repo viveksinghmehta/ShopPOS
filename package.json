@@ -17,9 +17,9 @@
     "url": "git+https://viveksinghmehta@github.com/viveksinghmehta/ShopPOS.git"
   },
   "author": "Vivek Singh Mehta",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/viveksinghmehta/ShopPOS/issues"
-  },
-  "homepage": "https://github.com/viveksinghmehta/ShopPOS#readme"
+  "license": "ISC"
+  // "bugs": {
+  //   "url": "https://github.com/viveksinghmehta/ShopPOS/issues"
+  // },
+  // "homepage": "https://github.com/viveksinghmehta/ShopPOS#readme"
 }

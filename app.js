@@ -39,5 +39,5 @@ app.get("/test", function (request, response) {
 const httpServer = http.createServer(app);
 
 httpServer.listen(process.env.PORT || 1526);
-console.log(process.env.PORT)
+console.log(process.env.PORT || 1526);
 console.log('server is up and running');
