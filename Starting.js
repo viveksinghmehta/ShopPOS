@@ -12,11 +12,14 @@ import bodyParser from 'body-parser';
 
 
 // create application/json parser
-var jsonParser = bodyParser.json()
+var jsonParser = bodyParser.json();
 
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+
+app.use(jsonParser);
+app.use(urlencodedParser);
 
 app.get("/test", function (request, response) {
     response.end("TEsting");
@@ -27,3 +30,5 @@ const app = express();
 const httpServer = http.createServer(app);
 
 httpServer.listen(process.env.PORT || 1526);
+console.log(process.env.PORT)
+console.log('server is up and running');
