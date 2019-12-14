@@ -1,31 +1,41 @@
-const http = require('http');
-const express = require('express');
-const bodyParser = require('body-parser');
+const http = require('http')
+const express = require('express')
+const bodyParser = require('body-parser')
+const morgan = require('morgan')
+const mysql = require('mysql')
 
-const app = express();
+const app = express()
 
-var mysql = require('mysql');
+app.use(morgan('combined'))
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "viveksinghmehta",
-    password: "123456"
-});
+    host: "remotemysql.com",
+    user: "6EVgi8atYp",
+    password: "6oD8mnzpSj",
+    database: "6EVgi8atYp",
+    PORT: "3306"
+})
 
 con.connect(function (err) {
+    let date_ob = new Date();
     if (err) throw err;
     console.log("Connected!");
-});
+    var sql = "INSERT INTO users (id, username, first_name, middle_name, last_name, hash_id, password, created_on) VALUES (1, 'viveksinghmehta', 'vivek', 'singh', 'mehta', '123456Seven', '123456Seven!', '8 December 2019')";
+    con.query(sql, function (err, result) {
+        if (err) throw err;
+        console.log("1 record inserted");
+    })
+})
 
 // create application/json parser
-var jsonParser = bodyParser.json();
+var jsonParser = bodyParser.json()
+
 
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: true });
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
-
-app.use(jsonParser);
-app.use(urlencodedParser);
+app.use(jsonParser)
+app.use(urlencodedParser)
 
 app.get("/test", function (request, response) {
     let newJson = {
@@ -47,10 +57,10 @@ app.get("/test", function (request, response) {
     }
     response.status(200);
     response.json(newJson);
-});
+})
 
-const httpServer = http.createServer(app);
+const httpServer = http.createServer(app)
 
-httpServer.listen(process.env.PORT || 1526);
-console.log(process.env.PORT || 1526);
-console.log('server is up and running');
+httpServer.listen(process.env.PORT || 1526)
+console.log(process.env.PORT || 1526)
+console.log('server is up and running')
