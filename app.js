@@ -3,6 +3,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const mysql = require('mysql')
+const pgsql = require('pg')
+const fs = require('fs')
 
 const app = express()
 
@@ -15,6 +17,10 @@ var con = mysql.createConnection({
     database: "6EVgi8atYp",
     PORT: "3306"
 })
+
+var pgconnection = pgsql.createConnection(
+    host: "",
+)
 
 con.connect(function (err) {
     let date_ob = new Date();
@@ -57,6 +63,14 @@ app.get("/test", function (request, response) {
     }
     response.status(200);
     response.json(newJson);
+})
+
+app.get("/", function (request, response) {
+  fs.readFile("./HTML/index.html", function (err, data) {
+      response.writeHead(200, { 'Content-Type': 'text/html'})
+      response.write(data)
+      response.end()
+  })  
 })
 
 const httpServer = http.createServer(app)
